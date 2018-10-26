@@ -1,0 +1,78 @@
+<div class="page-breadcrumb">
+  <div class="row">
+    <div class="col-12 d-flex no-block align-items-center">
+      <h4 class="page-title">Directives</h4>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 col-lg-12 col-xlg-12">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Inbuilt Directives <a href="https://angular.io/api?type=directive">Documentation</a></h4>
+          <div class="todo-widget scrollable ps-container ps-theme-default ps-active-y"
+            data-ps-id="e8ac8c44-d543-d2a7-6753-b6f0dd481d0a">
+            <h5>1. NgClass Directives</h5>
+            <button class="btn btn-danger btn-sm" (click)="classId = 1"> Make it Red</button>
+            <button class="btn btn-success btn-sm" (click)="classId = 2"> Make it
+              Green</button>
+            <div class="card card-hover" style="padding-top:10px;">
+              <div class="box text-center" [ngClass]="{'bg-danger' : classId == 1,'bg-success' : classId == 2,'bg-warning' : classId == 0}">
+                <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
+                <h6 class="text-white">My Value : {{classId}}</h6>
+                <h5>
+                  <a href="https://angular.io/api/common/NgClass" target="blank" style="padding:45px;">
+                    Read More </a>
+                </h5>
+              </div>
+
+            </div>
+
+            <h5>2. NgIf Pipe</h5>
+            <button class="btn btn-danger btn-sm" (click)="classId = 1"> Show Red</button>
+            <button class="btn btn-success btn-sm" (click)="classId = 2"> Show Green</button>
+            <div class="card card-hover" style="padding-top:10px;">
+              <div class="box text-center bg-danger" *ngIf="classId == 1">
+                <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
+                <h6 class="text-white">My Value : {{classId}}</h6>
+                <a href="https://angular.io/api/common/NgIf" target="blank" style="padding:45px;">
+                  Read More </a>
+              </div>
+              <div class="box text-center bg-success" *ngIf="classId == 2">
+                <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
+                <h6 class="text-white">My Value : {{classId}}</h6>
+                <a href="https://angular.io/api/common/NgIf" target="blank" style="padding:45px;">
+                  Read More </a>
+              </div>
+              <div class="box text-center bg-warning" *ngIf="classId == 0">
+                <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
+                <h6 class="text-white">My Value : {{classId}}</h6>
+                <a href="https://angular.io/api/common/NgIf" target="blank" style="padding:45px;">
+                  Read More </a>
+              </div>
+            </div>
+
+
+            <h5>3. NgStyle Directives</h5>
+            <button class="btn btn-danger btn-sm" (click)="classId = 1"> Make it Red</button>
+            <button class="btn btn-success btn-sm" (click)="classId = 2"> Make it
+              Green</button>
+            <div class="card card-hover" style="padding-top:10px;">
+              <div class="box text-center bg-cyan">
+                <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
+                <h6 class="text-white">
+                  <span [ngStyle]="{'color': classId == 1 ? '#ff0000' : (classId == 2 ? '#21ed12' : '#ffffff') }">My
+                    Value : {{classId}}</span></h6>
+                <h5>
+                  <a href="https://angular.io/api/common/NgStyle" target="blank" style="padding:45px;">
+                    Read More </a>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

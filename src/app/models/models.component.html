@@ -1,0 +1,84 @@
+<div class="page-breadcrumb">
+  <div class="row">
+    <div class="col-12 d-flex no-block align-items-center">
+      <h4 class="page-title">Models</h4>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 col-lg-12 col-xlg-12">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Models Data Binding</h4>
+          <div class="todo-widget scrollable ps-container ps-theme-default ps-active-y" data-ps-id="e8ac8c44-d543-d2a7-6753-b6f0dd481d0a">
+            <b>Id:</b> {{user?.id}} <br />
+            <b>Name:</b> {{user?.name}} <br />
+            <b>Salary:</b> {{user?.salary}} <br />
+            <b>DOB:</b> {{user?.dob | date:'MM/dd/yyyy'}} <br />
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Models Data Binding With TextBox</h4>
+          <div class="todo-widget scrollable ps-container ps-theme-default ps-active-y" data-ps-id="e8ac8c44-d543-d2a7-6753-b6f0dd481d0a">
+            <input type="text" [(ngModel)]="user.name" class="form-control">
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Models Click Event Binding</h4>
+          <div class="todo-widget scrollable ps-container ps-theme-default ps-active-y" data-ps-id="e8ac8c44-d543-d2a7-6753-b6f0dd481d0a">
+            <div class="input-group">
+              <input type="text" [(ngModel)]="user.name" class="form-control" id="datepicker-autoclose">
+              <div class="input-group-append cursor-pointer" style="cursor:pointer;" (click)="setValue()">
+                <span class="input-group-text">
+                  <i class="fa fa-window-close"></i>
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Models Change Event Binding</h4>
+          <div class="todo-widget scrollable ps-container ps-theme-default ps-active-y" data-ps-id="e8ac8c44-d543-d2a7-6753-b6f0dd481d0a">
+            <div class="input-group">
+              <div class="input-group-append cursor-pointer" style="cursor:pointer;" (click)="clearSum()">
+                <span class="input-group-text">
+                  {{eventBindingModel.sumOfNumbers}}
+                </span>
+              </div>
+              <input type="text" [(ngModel)]="eventBindingModel.myNumber" class="form-control" id="datepicker-autoclose"
+                (ngModelChange)="changeNumber()">
+              <div class="input-group-append cursor-pointer" style="cursor:pointer;" (click)="clearSum()">
+                <span class="input-group-text">
+                  <i class="fa fa-window-close"></i>
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Models Bind From Service</h4>
+          <div class="todo-widget scrollable ps-container ps-theme-default ps-active-y" data-ps-id="e8ac8c44-d543-d2a7-6753-b6f0dd481d0a">
+            <button class="btn btn-primary" (click)="getValueFromService()">Get User From Service</button> <br />
+            <div *ngIf="userFromService?.id > 0">
+              <b>Id:</b> {{userFromService?.id}} <br />
+              <b>Name:</b> {{ususerFromServiceer?.name}} <br />
+              <b>Salary:</b> {{userFromService?.salary}} <br />
+              <b>DOB:</b> {{userFromService?.dob | date:'MM/dd/yyyy'}} <br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

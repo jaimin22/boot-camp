@@ -1,0 +1,61 @@
+<aside class="left-sidebar" data-sidebarbg="skin5">
+  <!-- Sidebar scroll-->
+  <div class="scroll-sidebar">
+    <!-- Sidebar navigation-->
+    <nav class="sidebar-nav">
+      <ul class="p-t-30">
+        <li class="sidebar-item" [ngClass]="{'selected': activePath == '/component'}">
+          <a class="sidebar-link waves-effect waves-dark sidebar-link" routerLink="/component" aria-expanded="false">
+            <span class="hide-menu">
+              Component
+            </span>
+          </a>
+        </li>
+        <li class="sidebar-item" [ngClass]="{'selected': activePath == '/models'}">
+          <a class="sidebar-link waves-effect waves-dark sidebar-link" routerLink="/models" aria-expanded="false">
+            <span class="hide-menu">
+              Models
+            </span>
+          </a>
+        </li>
+        <li class="sidebar-item" [ngClass]="{'selected': activePath == '/directives'}">
+          <a class="sidebar-link waves-effect waves-dark sidebar-link" routerLink="/directives" aria-expanded="false">
+            <span class="hide-menu">
+              Directives
+            </span>
+          </a>
+        </li>
+        <li class="sidebar-item" [ngClass]="{'selected': activePath == '/pipes'}">
+          <a class="sidebar-link waves-effect waves-dark sidebar-link" routerLink="/pipes" aria-expanded="false">
+            <span class="hide-menu">
+              Pipes
+            </span>
+          </a>
+        </li>
+        <li class="sidebar-item" [ngClass]="{'selected': activePath == '/form'}">
+          <a class="sidebar-link waves-effect waves-dark sidebar-link" routerLink="/form" aria-expanded="false">
+            <span class="hide-menu">
+              Form
+            </span>
+          </a>
+        </li>
+        <li class="sidebar-item" [ngClass]="{'selected': activePath == '/other-library'}">
+          <a class="sidebar-link waves-effect waves-dark sidebar-link" routerLink="/other-library" aria-expanded="false">
+            <span class="hide-menu">
+              3rd Party Library
+            </span>
+          </a>
+        </li>
+        <li class="sidebar-item" [ngClass]="{'selected': activePath == '/broadcasting'}">
+          <a class="sidebar-link waves-effect waves-dark sidebar-link" routerLink="/broadcasting" aria-expanded="false">
+            <span class="hide-menu">
+              Broadcasting
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- End Sidebar navigation -->
+  </div>
+  <!-- End Sidebar scroll-->
+</aside>
